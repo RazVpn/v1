@@ -22,7 +22,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard VPS AutoScript by JINGGO007"
+echo -e "${Info} Wireguard VPS AutoScript by ICHIKAA"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
@@ -93,12 +93,12 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O mwg "https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/WG/mwg.sh"
-wget -O add-wg "https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/WG/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/WG/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/WG/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/WG/renew-wg.sh"
-wget -O port-wg "https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/WG/port-wg.sh"
+wget -O mwg "https://raw.githubusercontent.com/RazVpn/v1/main/WG/mwg.sh"
+wget -O add-wg "https://raw.githubusercontent.com/RazVpn/v1/main/WG/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/RazVpn/v1/main/WG/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/RazVpn/v1/main/WG/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/RazVpn/v1/main/WG/renew-wg.sh"
+wget -O port-wg "https://raw.githubusercontent.com/RazVpn/v1/main/WG/port-wg.sh"
 chmod +x mwg
 chmod +x add-wg
 chmod +x del-wg
