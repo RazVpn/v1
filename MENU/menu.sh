@@ -20,7 +20,7 @@ IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
-name=$(curl -sS https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/IP/REGIP | grep $IPVPS | awk '{print $2}')
+name=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $2}')
 exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $3}')
 
 echo -e  "${blue_b}       ╦╔═╗╦ ╦╦╦╔═╔═╗╔═╗  ╔═╗╔═╗╦═╗╦  ╦╦╔═╗╔═╗  "${NC}
