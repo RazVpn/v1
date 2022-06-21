@@ -77,7 +77,8 @@ port_tls $tls
 port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
-	echo -e ""
+	echo -e "==========================="
+        echo -e "===[ SERVICE BY RAZVPN ]==="
 	echo -e "=======-Shadowsocks-======="
 	echo -e "IP/Host        : $IP"
 	echo -e "Port OBFS TLS  : $tls"
