@@ -6,7 +6,7 @@ blue='\e[0;34m'
 blue_b='\e[0;94m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$(curl https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/IP/REGIP | grep $MYIP | awk '{print $4}')
+IZIN=$(curl https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $MYIP | awk '{print $4}')
 if [ $MYIP = $IZIN ]; then
     echo -e ""
     clear
@@ -21,14 +21,18 @@ DOMAIN=$(cat /etc/v2ray/domain)
 cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/IP/REGIP | grep $IPVPS | awk '{print $2}')
-exp=$(curl -sS https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/IP/REGIP | grep $IPVPS | awk '{print $3}')
+exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $3}')
 
-echo -e  "${blue_b}╔═══╗╔═══╗╔═══╗╔══╗╔═══╗╔════╗  ╔═══╗╔═══╗╔═══╗╔═╗╔═╗╔══╗╔╗ ╔╗╔═╗╔═╗"${NC}
-echo -e  "${blue_b}║╔═╗║║╔═╗║║╔═╗║╚╣╠╝║╔═╗║║╔╗╔╗║  ║╔═╗║║╔═╗║║╔══╝║║╚╝║║╚╣╠╝║║ ║║║║╚╝║║"${NC}
-echo -e  "${blue_b}╚══╗║║║ ╔╗║╔╗╔╝ ║║ ║╔══╝  ║║    ║╔══╝║╔╗╔╝║╔══╝║║║║║║ ║║ ║║ ║║║║║║║║"${NC}
-echo -e  "${blue_b}║╚═╝║║╚═╝║║║║╚╗╔╣╠╗║║    ╔╝╚╗   ║║   ║║║╚╗║╚══╗║║║║║║╔╣╠╗║╚═╝║║║║║║║"${NC}
-echo -e  "${blue_b}╚═══╝╚═══╝╚╝╚═╝╚══╝╚╝    ╚══╝   ╚╝   ╚╝╚═╝╚═══╝╚╝╚╝╚╝╚══╝╚═══╝╚╝╚╝╚╝"${NC}
-echo -e  " "
+echo -e  "${blue_b}       ██╗ ██████╗██╗  ██╗██╗██╗  ██╗ █████╗  █████╗     ██████╗ ██████╗ ███████╗███╗   ███╗██╗██╗   ██╗███╗   ███╗    "${NC}
+echo -e  "${blue_b}       ██║██╔════╝██║  ██║██║██║ ██╔╝██╔══██╗██╔══██╗    ██╔══██╗██╔══██╗██╔════╝████╗ ████║██║██║   ██║████╗ ████║    "${NC}
+echo -e  "${blue_b}       ██║██║     ███████║██║█████╔╝ ███████║███████║    ██████╔╝██████╔╝█████╗  ██╔████╔██║██║██║   ██║██╔████╔██║    "${NC}
+echo -e  "${blue_b}       ██║██║     ██╔══██║██║██╔═██╗ ██╔══██║██╔══██║    ██╔═══╝ ██╔══██╗██╔══╝  ██║╚██╔╝██║██║██║   ██║██║╚██╔╝██║    "${NC}
+echo -e  "${blue_b}       ██║╚██████╗██║  ██║██║██║  ██╗██║  ██║██║  ██║    ██║     ██║  ██║███████╗██║ ╚═╝ ██║██║╚██████╔╝██║ ╚═╝ ██║    "${NC}
+echo -e  "${blue_b}       ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝ ╚═════╝ ╚═╝     ╚═╝    "${NC}
+echo -e  "${red}          PREMIUM-SERVER-BY-RAZVPN   "${NC}
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  "${red}|                     INFORMATION                           | "                                                                                                     
+echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
 echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`"${NC}
@@ -36,6 +40,7 @@ echo -e  " ${green}KERNEL VERSION              : `uname -r`${NC}"
 echo -e  " ${green}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e  " ${green}CLIENT NAME                 : $name${NC}"
 echo -e  " ${green}EXP SCRIPT ACCSESS          : $exp${NC}"
+echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}MAIN MENU${NC} "                                       
