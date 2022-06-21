@@ -27,12 +27,12 @@ cp ohpserver /usr/local/bin/ohpserver
 
 #Buat File OpenVPN TCP OHP
 cat > /etc/openvpn/client-tcp-ohp.ovpn <<END
-# WELCOME TO JINGGO SCIPT
+# WELCOME TO Ichikaa Script 
 
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "JINGGO VPN"
+setenv FRIENDLY_NAME "RazVpn"
 remote bug 1194
 http-proxy xxxxxxxxx 8000
 resolv-retry infinite
@@ -80,8 +80,8 @@ END
 # OpenVPN OHP 
 cat > /etc/systemd/system/openvpn-ohp.service << END
 [Unit]]
-Description=OpenVPN OHP Service by jinggo007
-Documentation=https://t.me/jinggo007
+Description=OpenVPN OHP Service by RazVpn 
+Documentation=https://t.me/razvpn
 After=network.target nss-lookup.target
 
 [Service]
