@@ -23,15 +23,12 @@ expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/IP/REGIP | grep $IPVPS | awk '{print $2}')
 exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $3}')
 
-echo -e  "${blue_b}       ██╗ ██████╗██╗  ██╗██╗██╗  ██╗ █████╗  █████╗     ██████╗ ██████╗ ███████╗███╗   ███╗██╗██╗   ██╗███╗   ███╗    "${NC}
-echo -e  "${blue_b}       ██║██╔════╝██║  ██║██║██║ ██╔╝██╔══██╗██╔══██╗    ██╔══██╗██╔══██╗██╔════╝████╗ ████║██║██║   ██║████╗ ████║    "${NC}
-echo -e  "${blue_b}       ██║██║     ███████║██║█████╔╝ ███████║███████║    ██████╔╝██████╔╝█████╗  ██╔████╔██║██║██║   ██║██╔████╔██║    "${NC}
-echo -e  "${blue_b}       ██║██║     ██╔══██║██║██╔═██╗ ██╔══██║██╔══██║    ██╔═══╝ ██╔══██╗██╔══╝  ██║╚██╔╝██║██║██║   ██║██║╚██╔╝██║    "${NC}
-echo -e  "${blue_b}       ██║╚██████╗██║  ██║██║██║  ██╗██║  ██║██║  ██║    ██║     ██║  ██║███████╗██║ ╚═╝ ██║██║╚██████╔╝██║ ╚═╝ ██║    "${NC}
-echo -e  "${blue_b}       ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝ ╚═════╝ ╚═╝     ╚═╝    "${NC}
+echo -e  "${blue_b}       ╦╔═╗╦ ╦╦╦╔═╔═╗╔═╗  ╔═╗╔═╗╦═╗╦  ╦╦╔═╗╔═╗  "${NC}
+echo -e  "${blue_b}       ║║  ╠═╣║╠╩╗╠═╣╠═╣  ╚═╗║╣ ╠╦╝╚╗╔╝║║  ║╣   "${NC}
+echo -e  "${blue_b}       ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "${NC}
 echo -e  "${red}          PREMIUM-SERVER-BY-RAZVPN   "${NC}
 echo -e  " ═════════════════════════════════════════════════════════════════ "
-echo -e  "${red}|                     INFORMATION                           | "                                                                                                     
+echo -e  "${red}|                        INFORMATION                              | "${NC}                                                                                                   
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
@@ -68,6 +65,7 @@ echo -e  " [ 16 ] DISPLAY SYSTEM INFORMATION"
 echo -e  " [ 17 ] CHECK STREAM GEO LOCATION"
 echo -e  " [ 18 ] CHECK SERVICE ERROR"
 echo -e  " [ 19 ] UPDATE SCRIPT"
+echo -e  " [ 20 ] BANDWIDTH USAGE"
 echo -e  "  "
 echo -e  " ═════════════════════════════════════════════════════════════════" 
 echo -e  " ${green}[  0 ] EXIT MENU${NC}  "
@@ -133,7 +131,10 @@ echo -e "\e[0m"
    ;;
    19)
    update  
-   ;;   
+   ;;  
+   20)
+   vnstat
+   ;; 
    0)
    sleep 0.5
    clear
