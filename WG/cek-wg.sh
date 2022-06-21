@@ -61,7 +61,7 @@ listClients(){
 }
 listClients
 echo "-------------------------------";
-echo -e "By JINGGO007"
+echo -e "By RazVpn"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
