@@ -9,7 +9,7 @@ chmod +x /usr/local/bin/edussh-nontls
 # Installing Service
 cat > /etc/systemd/system/edussh-nontls.service << END
 [Unit]
-Description=Ssh Websocket By JINGGO007
+Description=Ssh Websocket By ICHIKAA
 Documentation=https://google.com
 After=network.target nss-lookup.target
 
@@ -35,13 +35,13 @@ systemctl restart edussh-nontls
 # =================================
 
 # Getting Ovpn Ws Template
-wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/jinGGo007/PRIVATE/main/SSHOVPN/edu-op.py
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/RazVpn/v1/main/SSHOPEN/edu-op.py
 chmod +x /usr/local/bin/edu-ovpn
 
 # Installing Service Ovpn Websocket
 cat > /etc/systemd/system/edu-ovpn.service << END
 [Unit]
-Description=Ovpn Websocket By JINGGO007
+Description=Ovpn Websocket By ICHIKAA 
 Documentation=https://google.com
 After=network.target nss-lookup.target
 
@@ -69,7 +69,7 @@ echo -e "==============================="
 echo -e "PORT SSH WS NON TLS          : 2082"
 echo -e "PORT OVPN WS B               : 2095"
 echo -e "==============================="
-echo -e "Script By JINGGO007"
+echo -e "Script By ICHIKAA"
 
 cd
 rm -f /root/edu.sh
