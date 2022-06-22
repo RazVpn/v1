@@ -20,7 +20,8 @@ IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 
-	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )	
+	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 
@@ -49,7 +50,8 @@ echo -e  " ${green}CLIENT NAME                 : $name${NC}"
 echo -e  " ${green}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${green}\e[032;1mCPU Model:\e[0m $cname"
 
-	echo -e " ${green}\e[032;1mNumber Of Cores:\e[0m $cores"	echo -e "   \e[032;1mCPU Frequency:\e[0m $freq MHz"
+	echo -e " ${green}\e[032;1mNumber Of Cores:\e[0m $cores"	
+	echo -e " ${green}\e[032;1mCPU Frequency:\e[0m $freq MHz"
 
 	echo -e " ${green}\e[032;1mTotal Amount Of RAM:\e[0m $tram MB"
 
