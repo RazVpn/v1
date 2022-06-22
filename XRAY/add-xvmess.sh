@@ -68,6 +68,7 @@ systemctl restart xray@v2ray-nontls
 service cron restart
 clear
 echo -e ""
+echo -e "    [ SERVICE BY RAZVPN ]     "
 echo -e "==========XRAY VMESS=========="
 echo -e "Remarks     : ${user}"
 echo -e "Expired     : $exp"
