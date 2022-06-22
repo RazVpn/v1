@@ -15,7 +15,17 @@ else
     echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER${NC}"
     exit 1
 fi
+clear
+neofetch
+sleep 1
+clear
 echo -e " "
+cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )	
+freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+tram=$( free -m | awk 'NR==2 {print $2}' )
+swap=$( free -m | awk 'NR==4 {print $2}' )
+up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
@@ -28,13 +38,27 @@ echo -e  "${blue_b}           ║║  ╠═╣║╠╩╗╠═╣╠═╣  �
 echo -e  "${blue_b}           ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "${NC}
 echo -e  "${red}                 PREMIUM-SERVER-BY-RAZVPN   "${NC}
 echo -e  " "
-echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
-echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
-echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`"${NC}
-echo -e  " ${green}KERNEL VERSION              : `uname -r`${NC}"
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  "${red}|                      USER INFORMATION                           | "${NC}                                                                                                   
+echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e  " ${green}CLIENT NAME                 : $name${NC}"
 echo -e  " ${green}EXP SCRIPT ACCSESS          : $exp${NC}"
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  "${red}|                      SERVER INFORMATION                         | "${NC}                                                                                                   
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
+echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
+echo -e  " ${green} SYSTEM UPTIME : $up${NC}"
+echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`${NC}"
+echo -e  " ${green}KERNEL VERSION              : `uname -r`${NC}"
+echo -e  " ${green}CPU MODEL                   : $cname${NC}"
+echo -e  " ${green} NUMBER OF CORES             : $cores${NC}"	
+echo -e  " ${green}CPU FREQUENCY              : $freq MHz${NC}"
+echo -e  " ${green}TOTAL AMOUNT OF RAM     : $tram MB${NC}"
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  " "
+echo -e  "                                 [ SERVICE ]                               "  
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}MAIN MENU${NC} "                                       
@@ -51,17 +75,32 @@ echo -e  " ═══════════════════════
 echo -e  " ${green}SYSTEM MENU${NC} "       
 echo -e  " ═════════════════════════════════════════════════════════════════ "                            
 echo -e  " [  8 ] ADD/CHANGE DOMAIN VPS"
-echo -e  " [  9 ] CHANGE PORT SERVICE"
-echo -e  " [ 10 ] CHANGE DNS SERVER"
-echo -e  " [ 11 ] RENEW V2RAY AND XRAY CERTIFICATION"
-echo -e  " [ 12 ] WEBMIN MENU"
-echo -e  " [ 13 ] CHECK RAM USAGE"
-echo -e  " [ 14 ] REBOOT VPS"
-echo -e  " [ 15 ] SPEEDTEST VPS"
-echo -e  " [ 16 ] DISPLAY SYSTEM INFORMATION"
-echo -e  " [ 17 ] CHECK STREAM GEO LOCATION"
-echo -e  " [ 18 ] CHECK SERVICE ERROR"
-echo -e  " [ 19 ] UPDATE SCRIPT"
+echo -e  " [  9 ] CHANGE DNS SERVER"
+echo -e  " [ 10 ] RENEW V2RAY AND XRAY CERTIFICATION"
+echo -e  " [ 11 ] WEBMIN MENU"
+echo -e  " [ 12 ] CHECK RAM USAGE"
+echo -e  " [ 13 ] REBOOT VPS"
+echo -e  " [ 14 ] SPEEDTEST VPS"
+echo -e  " [ 15 ] DISPLAY SYSTEM INFORMATION"
+echo -e  " [ 16 ] CHECK STREAM GEO LOCATION"
+echo -e  " [ 17 ] CHECK SERVICE ERROR"
+echo -e  " [ 18 ] UPDATE SCRIPT"
+echo -e  " [ 19 ] BANDWIDTH USAGE"
+echo -e  "  "
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  " ${green}CHANGE PORT${NC} "       
+echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  " [ 20 ] CHANGE PORT STUNNEL4"
+echo -e  " [ 21 ] CHANGE PORT OPENVPN"
+echo -e  " [ 22 ] CHANGE PORT SQUID"
+echo -e  " [ 23 ] CHANGE PORT WIREGUARD"
+echo -e  " [ 24 ] CHANGE PORT V2RAY VMESS"
+echo -e  " [ 25 ] CHANGE PORT V2RAY VLESS"
+echo -e  " [ 26 ] CHANGE PORT TROJAN GFW"
+echo -e  " [ 27 ] CHANGE PORT XRAY VMESS"
+echo -e  " [ 28 ] CHANGE PORT XRAY VLESS"
+echo -e  " [ 29 ] CHANGE PORT XRAY XTLS"
+echo -e  " [ 30 ] CHANGE PORT XRAY GRPC"
 echo -e  "  "
 echo -e  " ═════════════════════════════════════════════════════════════════" 
 echo -e  " ${green}[  0 ] EXIT MENU${NC}  "
@@ -96,38 +135,71 @@ echo -e "\e[0m"
    add-host
    ;;
    9)
-   change
-   ;;
-   10)
    mdns
    ;;
-   11)
+   10)
    recert-xrayv2ray
    ;;
-   12)
+   11)
    wbmn
    ;;
-   13)
+   12)
    ram
    ;;
-   14)
+   13)
    reboot
    ;;
-   15)
+   14)
    speedtest
    ;;
-   16)
+   15)
    info
    ;;
-   17)
+   16)
    nf
    ;;
-   18)
+   17)
    checksystem  
    ;;
-   19)
+   18)
    update  
-   ;;   
+   ;;  
+   19)
+   vnstat
+   ;;
+   20)
+   port-ssl
+   ;;
+   21)
+   port-ovpn
+   ;;
+   22)
+   port-squid
+   ;;
+   23)
+   port-wg
+   ;;
+   24)
+   port-ws
+   ;;
+   25)
+   port-vless
+   ;;
+   26)
+   port-tr
+   ;;
+   27)
+   port-xvmess
+   ;;
+   28)
+   port-xvless
+   ;;
+   29)
+   port-xtls
+   ;;
+   30)
+   port-grpc
+   ;;
    0)
    sleep 0.5
    clear
