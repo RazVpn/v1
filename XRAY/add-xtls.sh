@@ -29,7 +29,7 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#XRay$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","flow": "xtls-rprx-direct","email": "'""$user""'"' /etc/xray/vless-direct.json
 
-vless_direct="vless://${uuid}@${domain}:${vless1}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=bug.jinggo#$user"
+vless_direct="vless://${uuid}@${domain}:${vless1}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=bug.com#$user"
 
 # // Restarting Service
 systemctl stop xray@vless-direct
@@ -52,7 +52,7 @@ echo -e "================================="
 echo -e "Link Direct    : ${vless_direct}"
 echo -e ""
 echo -e "================================="
-echo -e "Gantikan bug.jinggo dengan BUG anda"
+echo -e "Gantikan bug.com dengan BUG anda"
 echo -e "================================="
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
