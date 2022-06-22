@@ -179,6 +179,9 @@ echo 'nameserver 8.8.8.8' > /etc/resolvconf/resolv.conf.d/head
 echo 'nameserver 8.8.8.8' > /etc/resolv.conf
 systemctl restart resolvconf.service
 
+#install neofetch
+apt install neofetch 
+
 clear
 echo " "
 echo "Installation Completed!!"
