@@ -54,18 +54,18 @@ echo -e  " ═══════════════════════
 echo -e  " ${green}SYSTEM MENU${NC} "       
 echo -e  " ═════════════════════════════════════════════════════════════════ "                            
 echo -e  " [  8 ] ADD/CHANGE DOMAIN VPS"
-echo -e  " [  9 ] CHANGE PORT SERVICE"
-echo -e  " [ 10 ] CHANGE DNS SERVER"
-echo -e  " [ 11 ] RENEW V2RAY AND XRAY CERTIFICATION"
-echo -e  " [ 12 ] WEBMIN MENU"
-echo -e  " [ 13 ] CHECK RAM USAGE"
-echo -e  " [ 14 ] REBOOT VPS"
-echo -e  " [ 15 ] SPEEDTEST VPS"
-echo -e  " [ 16 ] DISPLAY SYSTEM INFORMATION"
-echo -e  " [ 17 ] CHECK STREAM GEO LOCATION"
-echo -e  " [ 18 ] CHECK SERVICE ERROR"
-echo -e  " [ 19 ] UPDATE SCRIPT"
-echo -e  " [ 20 ] BANDWIDTH USAGE"
+
+echo -e  " [ 9 ] CHANGE DNS SERVER"
+echo -e  " [ 10 ] RENEW V2RAY AND XRAY CERTIFICATION"
+echo -e  " [ 11 ] WEBMIN MENU"
+echo -e  " [ 12 ] CHECK RAM USAGE"
+echo -e  " [ 13 ] REBOOT VPS"
+echo -e  " [ 14 ] SPEEDTEST VPS"
+echo -e  " [ 15 ] DISPLAY SYSTEM INFORMATION"
+echo -e  " [ 16 ] CHECK STREAM GEO LOCATION"
+echo -e  " [ 17 ] CHECK SERVICE ERROR"
+echo -e  " [ 18 ] UPDATE SCRIPT"
+echo -e  " [ 19 ] BANDWIDTH USAGE"
 echo -e  "  "
 echo -e  " ═════════════════════════════════════════════════════════════════" 
 echo -e  " ${green}[  0 ] EXIT MENU${NC}  "
@@ -98,41 +98,41 @@ echo -e "\e[0m"
    ;;
    8)
    add-host
+  
+
+
    ;;
    9)
-   change
-   ;;
-   10)
    mdns
    ;;
-   11)
+   10)
    recert-xrayv2ray
    ;;
-   12)
+   11)
    wbmn
    ;;
-   13)
+   12)
    ram
    ;;
-   14)
+   13)
    reboot
    ;;
-   15)
+   14)
    speedtest
    ;;
-   16)
+   15)
    info
    ;;
-   17)
+   16)
    nf
    ;;
-   18)
+   17)
    checksystem  
    ;;
-   19)
+   18)
    update  
    ;;  
-   20)
+   19)
    vnstat
    ;; 
    0)
