@@ -15,15 +15,16 @@ else
     echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER${NC}"
     exit 1
 fi
+sleep 0.5
+clear
 echo -e " "
-IPVPS=$(curl -s icanhazip.com)
-DOMAIN=$(cat /etc/v2ray/domain)
-up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )	
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 swap=$( free -m | awk 'NR==4 {print $2}' )
+IPVPS=$(curl -s icanhazip.com)
+DOMAIN=$(cat /etc/v2ray/domain)
 cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $2}')
@@ -45,13 +46,12 @@ echo -e  "${red}|                      SERVER INFORMATION                       
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
-echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`"${NC}
+echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`${NC}"
 echo -e  " ${green}KERNEL VERSION              : `uname -r`${NC}"
-echo -e  " ${green}CPU Model                   : $cname${NC"
-echo -e  " ${green}Number Of Cores             : $cores${NC"	
-echo -e  " ${green}CPU Frequency               : $freq MHz${NC"
-echo -e  " ${green}Total Amount Of RAM         : $tram MB${NC"
-echo -e  " ${green}System Uptime               : $up${NC"
+echo -e  " ${green}CPU Model                   : $cname${NC}"
+echo -e  " ${green}Number Of Cores             : $cores${NC}"	
+echo -e  " ${green}CPU Frequency               : $freq MHz${NC}"
+echo -e  " ${green}Total Amount Of RAM         : $tram MB${NC}"
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " "
 echo -e  "                                 [ SERVICE ]                               "  
