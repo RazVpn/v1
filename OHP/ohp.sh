@@ -32,7 +32,7 @@ cat > /etc/openvpn/client-tcp-ohp.ovpn <<END
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "RazVpn"
+setenv FRIENDLY_NAME "RazVpn TCP"
 remote bug 1194
 http-proxy xxxxxxxxx 8000
 resolv-retry infinite
@@ -64,8 +64,8 @@ cd
 # Dropbear OHP 
 cat > /etc/systemd/system/dropbear-ohp.service << END
 [Unit]]
-Description=Dropbear OHP Service by jinggo007
-Documentation=https://t.me/jinggo007
+Description=Dropbear OHP Service by ICHIKAA 
+Documentation=https://t.me/Ichikaa1
 After=network.target nss-lookup.target
 
 [Service]
@@ -80,8 +80,8 @@ END
 # OpenVPN OHP 
 cat > /etc/systemd/system/openvpn-ohp.service << END
 [Unit]]
-Description=OpenVPN OHP Service by RazVpn 
-Documentation=https://t.me/razvpn
+Description=OpenVPN OHP Service by ICHIKAA 
+Documentation=https://t.me/Ichikaa1
 After=network.target nss-lookup.target
 
 [Service]
