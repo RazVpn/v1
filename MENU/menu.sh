@@ -27,6 +27,7 @@ echo -e  "${blue_b}           ╦╔═╗╦ ╦╦╦╔═╔═╗╔═╗ 
 echo -e  "${blue_b}           ║║  ╠═╣║╠╩╗╠═╣╠═╣  ╚═╗║╣ ╠╦╝╚╗╔╝║║  ║╣   "${NC}
 echo -e  "${blue_b}           ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "${NC}
 echo -e  "${red}                 PREMIUM-SERVER-BY-RAZVPN   "${NC}
+echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  "${red}|                           INFORMATION                           | "${NC}                                                                                                   
 echo -e  " ═════════════════════════════════════════════════════════════════ "
@@ -38,6 +39,7 @@ echo -e  " ${green}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
 echo -e  " ${green}CLIENT NAME                 : $name${NC}"
 echo -e  " ${green}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  " "
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}MAIN MENU${NC} "                                       
@@ -72,7 +74,15 @@ echo -e  " ═══════════════════════
 echo -e  " [ 20 ] CHANGE PORT STUNNEL4"
 echo -e  " [ 21 ] CHANGE PORT OPENVPN"
 echo -e  " [ 22 ] CHANGE PORT SQUID"
-
+echo -e  " [ 23 ] CHANGE PORT WIREGUARD"
+echo -e  " [ 24 ] CHANGE PORT V2RAY VMESS"
+echo -e  " [ 25 ] CHANGE PORT V2RAY VLESS"
+echo -e  " [ 26 ] CHANGE PORT TROJAN GFW"
+echo -e  " [ 27 ] CHANGE PORT XRAY VMESS"
+echo -e  " [ 28 ] CHANGE PORT XRAY VLESS"
+echo -e  " [ 29 ] CHANGE PORT XRAY XTLS"
+echo -e  " [ 30 ] CHANGE PORT XRAY GRPC"
+echo -e  "  "
 echo -e  " ═════════════════════════════════════════════════════════════════" 
 echo -e  " ${green}[  0 ] EXIT MENU${NC}  "
 echo -e  " ═════════════════════════════════════════════════════════════════"
@@ -104,9 +114,6 @@ echo -e "\e[0m"
    ;;
    8)
    add-host
-  
-
-
    ;;
    9)
    mdns
@@ -140,7 +147,40 @@ echo -e "\e[0m"
    ;;  
    19)
    vnstat
-   ;; 
+   ;;
+   20)
+   port-ssl
+   ;;
+   21)
+   port-ovpn
+   ;;
+   22)
+   port-squid
+   ;;
+   23)
+   port-wg
+   ;;
+   24)
+   port-ws
+   ;;
+   25)
+   port-vless
+   ;;
+   26)
+   port-tr
+   ;;
+   27)
+   port-xvmess
+   ;;
+   28)
+   port-xvless
+   ;;
+   29)
+   port-xtls
+   ;;
+   30)
+   port-grpc
+   ;;
    0)
    sleep 0.5
    clear
