@@ -46,7 +46,7 @@ echo -e "ADDING OHP SERVICE FOR RUNNING"
 sleep 3;clear
 cat> /etc/systemd/system/ohp.service << END
 [Unit]
-Description=OHP by jinggo
+Description=OHP by ICHIKAA 
 [Service]
 Type=forking
 ExecStart=/usr/bin/ohp
