@@ -18,8 +18,7 @@ fi
 echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
-cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
-expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
+
 name=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $2}')
 exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/v1/main/IP | grep $IPVPS | awk '{print $3}')
 
@@ -35,7 +34,7 @@ echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
 echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`"${NC}
 echo -e  " ${green}KERNEL VERSION              : `uname -r`${NC}"
-echo -e  " ${green}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
+
 echo -e  " ${green}CLIENT NAME                 : $name${NC}"
 echo -e  " ${green}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e  " ═════════════════════════════════════════════════════════════════ "
