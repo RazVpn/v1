@@ -49,16 +49,16 @@ echo -e  "${red}|                      SERVER INFORMATION                       
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}IP VPS NUMBER               : $IPVPS${NC}"
 echo -e  " ${green}DOMAIN                      : $DOMAIN${NC}"
-echo -e  " ${green} SYSTEM UPTIME : $up${NC}"
+echo -e  " ${green} SYSTEM UPTIME              : $up${NC}"
 echo -e  " ${green}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`${NC}"
 echo -e  " ${green}KERNEL VERSION              : `uname -r`${NC}"
 echo -e  " ${green}CPU MODEL                   : $cname${NC}"
-echo -e  " ${green} NUMBER OF CORES             : $cores${NC}"	
-echo -e  " ${green}CPU FREQUENCY              : $freq MHz${NC}"
-echo -e  " ${green}TOTAL AMOUNT OF RAM     : $tram MB${NC}"
+echo -e  " ${green}NUMBER OF CORES             : $cores${NC}"	
+echo -e  " ${green}CPU FREQUENCY               : $freq MHz${NC}"
+echo -e  " ${green}TOTAL AMOUNT OF RAM         : $tram MB${NC}"
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " "
-echo -e  "                                 [ SERVICE ]                               "  
+echo -e  "                             [ SERVICE ]                               "  
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${green}MAIN MENU${NC} "                                       
@@ -102,8 +102,9 @@ echo -e  " [ 28 ] CHANGE PORT XRAY VLESS"
 echo -e  " [ 29 ] CHANGE PORT XRAY XTLS"
 echo -e  " [ 30 ] CHANGE PORT XRAY GRPC"
 echo -e  "  "
-echo -e  " ═════════════════════════════════════════════════════════════════" 
-echo -e  " ${green}[  0 ] EXIT MENU${NC}  "
+echo -e  " ═════════════════════════════════════════════════════════════════"
+echo -e  " ${green}[  0 ] REBOOT SERVER${NC}  "
+echo -e  " ${green}[  x ] EXIT MENU${NC}  "
 echo -e  " ═════════════════════════════════════════════════════════════════"
 echo -e  "  "
 echo -e "\e[1;31m"
@@ -201,6 +202,9 @@ echo -e "\e[0m"
    port-grpc
    ;;
    0)
+   reboot
+   ;;
+   x)
    sleep 0.5
    clear
    jinggo
