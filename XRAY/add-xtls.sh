@@ -41,6 +41,7 @@ systemctl restart xray@vless-direct
 
 clear
 echo -e ""
+echo -e "        [ SERVICE BY RAZVPN ]"
 echo -e "==========-XRAYS VLESS XTLS-=========="
 echo -e "Remarks        : ${user}"
 echo -e "Expired On     : $exp"
