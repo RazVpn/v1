@@ -15,7 +15,9 @@ else
     echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER${NC}"
     exit 1
 fi
-sleep 0.5
+clear
+neofetch
+sleep 2
 clear
 echo -e " "
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
