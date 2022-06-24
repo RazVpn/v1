@@ -10,7 +10,7 @@
 ![Squid](https://shields.io/badge/Service-Squid-orange?logo=testinglibrary&style=for-the-badge) 
 ![OHP](https://shields.io/badge/Service-OHP-orange?logo=openapiinitiative&style=for-the-badge) 
 ![BadVPN UDPGw](https://shields.io/badge/Service-BadVPN%20UDPGw-orange?logo=ublockorigin&style=for-the-badge) 
-![Xray](https://shields.io/badge/Service-Xray-orange?logo=xstate&style=for-the-badge) 
+![Xray](https://shields.io/badge/Service-Xray-orange?logo=v&style=for-the-badge) 
 ![V2ray](https://shields.io/badge/Service-V2ray-orange?logo=xstate&style=for-the-badge)
 ![WireGuard](https://shields.io/badge/Service-WireGuard-orange?logo=wireguard&style=for-the-badge) 
 ![Nginx](https://shields.io/badge/Service-Nginx-orange?logo=onnx&style=for-the-badge)
