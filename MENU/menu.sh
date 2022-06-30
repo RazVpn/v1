@@ -84,7 +84,6 @@ echo -e  " ${red}[ 16 ] CHECK STREAM GEO LOCATION${NC}"
 echo -e  " ${red}[ 17 ] CHECK SERVICE ERROR${NC}"
 echo -e  " ${red}[ 18 ] UPDATE SCRIPT${NC}"
 echo -e  " ${red}[ 19 ] BANDWIDTH USAGE${NC}"
-echo -e  " ${red}[ 20 ] ENCRYPT FILE.SH ONLY${NC} "
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════"
 echo -e  " ${red}[  0 ] REBOOT SERVER${NC}  "
@@ -151,10 +150,6 @@ echo -e "\e[0m"
    ;;  
    19)
    vnstat
-   read -n 1 -s -r -p "Press any key to back on menu"
-   ;;
-   20)
-   enc
    ;;
    0)
    reboot
