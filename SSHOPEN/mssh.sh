@@ -19,9 +19,9 @@ echo -e  "    [  7 ] DELETE USER EXPIRED"
 echo -e  "    [  8 ] SET AUTO KILL LOGIN"
 echo -e  "    [  9 ] DISPLAY USER MULTILOGIN"
 echo -e  "    [ 10 ] RESTART SERVICE"
-echo -e "     [ 11 ] CHANGE PORT OPENVPN"
-echo -e "     [ 12 ] CHANGE PORT SQUID"
-echo -e "     [ 13 ] CHANGE PORT STUNNEL4${NC} "
+echo -e  "    [ 11 ] CHANGE PORT OPENVPN"
+echo -e  "    [ 12 ] CHANGE PORT SQUID"
+echo -e  "    [ 13 ] CHANGE PORT STUNNEL4${NC} "
 echo -e  "  " 
 echo -e  "  ════════════════════════════════════════════════════════════ " 
 echo -e  "    ${red}[  0 ] EXIT TO MENU${NC} "
@@ -62,17 +62,17 @@ case $ssh in
 	;;
 	11)
 	port-ovpn
-    ;;
-    12)
-    port-squid
-    ;;
-    13)
-    port-ssl
-    ;;
+        ;;
+        12)
+        port-squid
+       ;;
+       13)
+       port-ssl
+       ;;
 	0)
-    menu
-    ;;
-	*)
+       menu
+       ;;
+        *)
 	echo -e "Please enter an correct number"
 	sleep 1
 	clear
