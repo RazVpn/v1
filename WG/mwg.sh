@@ -1,22 +1,22 @@
 #!/bin/bash
 clear
 red='\e[1;31m'
-red='\e[0;32m'
+
 NC='\e[0m'
 
 
 echo -e ""
-echo -e " ══════════════════════════════════════════════" 
-echo -e "            ${red}WIREGUARD${NC}                  " 
+echo -e " ${red}══════════════════════════════════════════════" 
+echo -e "            WIREGUARD                  " 
 echo -e " ══════════════════════════════════════════════" 
 echo -e " " 
 echo -e "   ${red}[ 1 ] CREATE NEW USER"
 echo -e "   [ 2 ] DELETE ACTIVE USER"
 echo -e "   [ 3 ] CHECK USER LOGIN"
 echo -e "   [ 4 ] EXTEND ACTIVE USER"
-echo -e "   [ 5 ] CHANGE PORT WIREGUARD${NC} "
+echo -e "   [ 5 ] CHANGE PORT WIREGUARD "
 echo -e " ══════════════════════════════════════════════" 
-echo -e "   ${red}[ 0 ] EXIT TO MENU${NC} " 
+echo -e "   ${red}[ 0 ] EXIT TO MENU " 
 echo -e " ══════════════════════════════════════════════" 
 echo -e "\e[1;31m"
 read -p "     Please select an option :  "  wg
