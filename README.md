@@ -1,6 +1,6 @@
 
 # Autoscript VPS (Ubuntu 18-20/Debian 10)
-![OS](https://shields.io/badge/OS-Ubuntu%2020+-green?logo=ubuntu&style=for-the-badge) 
+![OS](https://shields.io/badge/OS-Ubuntu%2018+-green?logo=ubuntu&style=for-the-badge) 
 ![OS](https://shields.io/badge/OS-Debian%2010+-green?logo=debian&style=for-the-badge)
 ![Virtualization](https://shields.io/badge/Virtualization-KVM-green?logo=tryhackme&style=for-the-badge) ![Architecture](https://shields.io/badge/Architecture-Intel%20or%20AMD-green?logo=moleculer&style=for-the-badge)
 
