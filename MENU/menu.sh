@@ -32,7 +32,7 @@ exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/ip/main/ipvps | grep $IP
 
 echo -e  "${red}           ╦╔═╗╦ ╦╦╦╔═╔═╗╔═╗  ╔═╗╔═╗╦═╗╦  ╦╦╔═╗╔═╗  "
 echo -e  "${red}           ║║  ╠═╣║╠╩╗╠═╣╠═╣  ╚═╗║╣ ╠╦╝╚╗╔╝║║  ║╣   "
-echo -e  "${red}           ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "${NC}
+echo -e  "${red}           ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "
 echo -e  "${red}                 PREMIUM-SERVER-BY-RAZVPN   "
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
