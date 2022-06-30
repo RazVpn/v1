@@ -3,8 +3,6 @@ clear
 red='\e[0;31m'
 green='\e[0;32m'
 blue='\e[0;34m'
-red='\e[0;94m'
-red='\e[0;37m'
 cyan='\e[0;36m'
 purple='\e[0;35m'
 red='\e[0;33m'
