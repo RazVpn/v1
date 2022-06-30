@@ -1,13 +1,12 @@
 #!/bin/bash
 clear
 red='\e[1;31m'
-red='\e[0;32m'
 NC='\e[0m'
 
 echo -e ""
-echo -e  "  ════════════════════════════════════════════════════════════ " 
-echo -e  "               ${red}SSH & OPENVPN MENU${NC}                     " 
-echo -e  "  ════════════════════════════════════════════════════════════ " 
+echo -e  " ${red} ════════════════════════════════════════════════════════════ " 
+echo -e  "               SSH & OPENVPN MENU.                    " 
+echo -e  "  ════════════════════════════════════════════════════════════ ${NC} " 
 echo -e  "  " 
 echo -e  "   ${red} [  1 ] CREATE NEW USER ${NC} "
 echo -e  "   ${red} [  2 ] GENERATE TRIAL USER${NC} "
@@ -21,10 +20,10 @@ echo -e  "   ${red} [  9 ] DISPLAY USER MULTILOGIN${NC} "
 echo -e  "   ${red} [ 10 ] RESTART SERVICE${NC} "
 echo -e  "   ${red} [ 11 ] CHANGE PORT OPENVPN${NC} "
 echo -e  "   ${red} [ 12 ] CHANGE PORT SQUID${NC} "
-echo -e  "   ${red} [ 13 ] CHANGE PORT STUNNEL4${NC} "
+echo -e  "   ${red} [ 13 ] CHANGE PORT STUNNEL4 "
 echo -e  "  " 
 echo -e  "  ════════════════════════════════════════════════════════════ " 
-echo -e  "    ${red}[  0 ] EXIT TO MENU${NC} "
+echo -e  "    ${red}[  0 ] EXIT TO MENU"
 echo -e  "  ════════════════════════════════════════════════════════════ " 
 echo -e "\e[1;31m"
 read -p "            Please Input Number :  " ssh
