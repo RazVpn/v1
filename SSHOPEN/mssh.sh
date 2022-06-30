@@ -9,19 +9,19 @@ echo -e  "  ══════════════════════�
 echo -e  "               ${red}SSH & OPENVPN MENU${NC}                     " 
 echo -e  "  ════════════════════════════════════════════════════════════ " 
 echo -e  "  " 
-echo -e  "   ${red} [  1 ] CREATE NEW USER "
-echo -e  "    [  2 ] GENERATE TRIAL USER "
-echo -e  "    [  3 ] EXTEND ACCOUNT ACTIVE"
-echo -e  "    [  4 ] DELETE ACTIVE USER"
-echo -e  "    [  5 ] CHECK USER LOGIN"
-echo -e  "    [  6 ] LIST USER INFORMATION"
-echo -e  "    [  7 ] DELETE USER EXPIRED"
-echo -e  "    [  8 ] SET AUTO KILL LOGIN"
-echo -e  "    [  9 ] DISPLAY USER MULTILOGIN"
-echo -e  "    [ 10 ] RESTART SERVICE"
-echo -e  "    [ 11 ] CHANGE PORT OPENVPN"
-echo -e  "    [ 12 ] CHANGE PORT SQUID"
-echo -e  "    [ 13 ] CHANGE PORT STUNNEL4${NC} "
+echo -e  "   ${red} [  1 ] CREATE NEW USER ${NC} "
+echo -e  "   ${red} [  2 ] GENERATE TRIAL USER${NC} "
+echo -e  "   ${red} [  3 ] EXTEND ACCOUNT ACTIVE${NC} "
+echo -e  "   ${red} [  4 ] DELETE ACTIVE USER${NC} "
+echo -e  "   ${red} [  5 ] CHECK USER LOGIN${NC} "
+echo -e  "   ${red} [  6 ] LIST USER INFORMATION${NC} "
+echo -e  "   ${red} [  7 ] DELETE USER EXPIRED${NC} "
+echo -e  "   ${red} [  8 ] SET AUTO KILL LOGIN${NC} "
+echo -e  "   ${red} [  9 ] DISPLAY USER MULTILOGIN${NC} "
+echo -e  "   ${red} [ 10 ] RESTART SERVICE${NC} "
+echo -e  "   ${red} [ 11 ] CHANGE PORT OPENVPN${NC} "
+echo -e  "   ${red} [ 12 ] CHANGE PORT SQUID${NC} "
+echo -e  "   ${red} [ 13 ] CHANGE PORT STUNNEL4${NC} "
 echo -e  "  " 
 echo -e  "  ════════════════════════════════════════════════════════════ " 
 echo -e  "    ${red}[  0 ] EXIT TO MENU${NC} "
@@ -65,13 +65,13 @@ case $ssh in
         ;;
         12)
         port-squid
-       ;;
-       13)
-       port-ssl
-       ;;
+        ;;
+        13)
+        port-ssl
+        ;;
 	0)
-       menu
-       ;;
+        menu
+        ;;
         *)
 	echo -e "Please enter an correct number"
 	sleep 1
