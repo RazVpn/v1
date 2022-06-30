@@ -77,7 +77,8 @@ echo -e  " ${red}[ 15 ] DISPLAY SYSTEM INFORMATION${NC}"
 echo -e  " ${red}[ 16 ] CHECK STREAM GEO LOCATION${NC}"
 echo -e  " ${red}[ 17 ] CHECK SERVICE ERROR${NC}"
 echo -e  " ${red}[ 18 ] UPDATE SCRIPT${NC}"
-echo -e  " ${red}[ 19 ] BANDWIDTH USAG"
+echo -e  " ${red}[ 19 ] BANDWIDTH USAGE"
+echo -e  " ${red}[ 20 ] ENCRYPT FILE"
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════"
 echo -e  " ${red}[  0 ] REBOOT SERVER${NC}  "
@@ -144,6 +145,9 @@ echo -e "\e[0m"
    ;;  
    19)
    vnstat
+   ;;
+   20)
+   enc
    ;;
    0)
    reboot
