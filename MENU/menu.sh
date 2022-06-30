@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 red='\e[0;31m'
-red='\e[0;32m'
+green='\e[0;32m'
 blue='\e[0;34m'
 red='\e[0;94m'
 red='\e[0;37m'
