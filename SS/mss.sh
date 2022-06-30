@@ -4,7 +4,7 @@ red='\e[1;31m'
 NC='\e[0m'
 
 echo -e ""
-echo -e " ${green} ═════════════════════════════════════════"
+echo -e " ${red} ═════════════════════════════════════════"
 echo -e "        SHADOWSOCKS OBFS   " 
 echo -e " ═════════════════════════════════════════"
 echo -e " " 
@@ -13,7 +13,7 @@ echo -e "   [ 2 ]  DELETE ACTIVE USER"
 echo -e "   [ 3 ]  EXTEND ACTIVE USER"
 echo -e "   [ 4 ]  CHECK USER LOGIN"
 echo -e " ═════════════════════════════════════════" 
-echo -e "   ${green}[ 0 ]  EXIT TO MENU"
+echo -e "   ${red}[ 0 ]  EXIT TO MENU"
 echo -e " ═════════════════════════════════════════" 
 echo -e "\e[1;31m"
 read -p "     Please Input Number  :  "  ss
