@@ -1,11 +1,11 @@
 #!/bin/bash
 clear
 red='\e[1;31m'
-red='\e[0;32m'
+
 NC='\e[0m'
 echo -e ""
-echo -e "  ═══════════════════════════════════════════════" 
-echo -e "            ${red}TROJAN GFW                    " 
+echo -e " ${red} ═══════════════════════════════════════════════" 
+echo -e "            TROJAN GFW                    " 
 echo -e "  ═══════════════════════════════════════════════" 
 echo -e "  " 
 echo -e "   ${red}[ 1 ] CREATE NEW USER"
