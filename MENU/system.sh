@@ -29,6 +29,9 @@ echo -e  " ${red}[  9 ] BANDWIDTH USAGE"
 echo -e  " ${red}[ 10 ] ENCRYPT FILE"
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
+echo -e  " ${red}Click [ CTRL + C ] Or x For Exit Menu "
+
+echo -e  "  "
 echo -e "\e[1;31m"
 read -p  "     Please select an option :  " menu
 echo -e "\e[0m"
