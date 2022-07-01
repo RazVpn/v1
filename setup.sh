@@ -187,6 +187,13 @@ echo -e "============================================="
 echo -e " ${green}  INSTALL ENCRYPT (FILE.SH ONLY)${NC} " 
 wget https://raw.githubusercontent.com/jinGGo007/SCRIPT/main/setup-enc.sh && chmod +x setup-enc.sh && ./setup-enc.sh
 
+#install system
+wget https://raw.githubusercontent.com/RazVpn/v1/main/MENU/system.sh
+chmod +x system.sh
+sed -i -e 's/\r$//' system.sh
+
+
+
 clear
 echo " "
 echo "Installation Completed!!"
