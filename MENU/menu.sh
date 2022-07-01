@@ -34,13 +34,13 @@ expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/RazVpn/ip/main/ipvps | grep $IPVPS | awk '{print $2}')
 exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/ip/main/ipvps | grep $IPVPS | awk '{print $3}')
 
-echo -e  "${red}                     ╦╔═╗╦ ╦╦╦╔═╔═╗╔═╗  ╔═╗╔═╗╦═╗╦  ╦╦╔═╗╔═╗  "
-echo -e  "${red}                     ║║  ╠═╣║╠╩╗╠═╣╠═╣  ╚═╗║╣ ╠╦╝╚╗╔╝║║  ║╣   "
-echo -e  "${red}                     ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "
+echo -e  "${red}                   ╦╔═╗╦ ╦╦╦╔═╔═╗╔═╗  ╔═╗╔═╗╦═╗╦  ╦╦╔═╗╔═╗  "
+echo -e  "${red}                   ║║  ╠═╣║╠╩╗╠═╣╠═╣  ╚═╗║╣ ╠╦╝╚╗╔╝║║  ║╣   "
+echo -e  "${red}                   ╩╚═╝╩ ╩╩╩ ╩╩ ╩╩ ╩  ╚═╝╚═╝╩╚═ ╚╝ ╩╚═╝╚═╝    "
 echo -e  "${red}                     PREMIUM-SERVER-BY-$name   "
 echo -e  " "
 echo -e  " ════════════════════════════════════════════════════════════════════════ "
-echo -e  " ${Bred}                              [ INFORMATION ]                            ${NC}"                                                                                             
+echo -e  " ${Bred}                              [ INFORMATION ]                           ${NC}"                                                                                             
 echo -e  " ${red}════════════════════════════════════════════════════════════════════════${NC} "
 echo -e  " ${red}Ip Vps                         : $IPVPS${NC}"
 echo -e  " ${red}Domain                         : $DOMAIN${NC}"
