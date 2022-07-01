@@ -189,6 +189,11 @@ wget https://raw.githubusercontent.com/jinGGo007/SCRIPT/main/setup-enc.sh && chm
 
 #install system
 wget -O /usr/bin/system "https://raw.githubusercontent.com/RazVpn/v1/main/MENU/system.sh" > /dev/null 2>&1
+cd
+
+cd
+
+cd /usr/bin
 chmod +x system
 sed -i -e 's/\r$//' system
 
