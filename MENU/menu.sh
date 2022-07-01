@@ -24,7 +24,9 @@ cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 swap=$( free -m | awk 'NR==4 {print $2}' )
-up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
@@ -42,6 +44,9 @@ echo -e  " ${Bred}                              [ INFORMATION ]                 
 echo -e  " ${red}════════════════════════════════════════════════════════════════════════${NC} "
 echo -e  " ${red}Ip Vps                         : $IPVPS${NC}"
 echo -e  " ${red}Domain                         : $DOMAIN${NC}"
+echo -e  " ${red}Isp Provider                   : $ISP${NC}"
+echo -e  " ${red}City                           : $CITY${NC}"
+echo -e  " ${red}Time Location                  : $WKT${NC}"
 echo -e  " ${red}Os Version                     : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`${NC}"
 echo -e  " ${red}Kernel Version                 : `uname -r`${NC}"
 echo -e  " ${red}Cpu Model                      :$cname${NC}"
@@ -50,7 +55,7 @@ echo -e  " ${red}Cpu Frequency                  :$freq MHz${NC}"
 echo -e  " ${red}Total Amount Of Ram            : $tram MB${NC}"
 echo -e  " ${red}Exp Date Cert V2ray/Xray       : $expxray"
 echo -e  " ${red}Client                         : $name${NC}"
-echo -e  " ${red}Expired Script                 : $exp${NC}"
+echo -e  " ${red}Expire Script Date             : $exp${NC}"
 echo -e  " ${red}Provided By                    : RazVpn | Ichikaa"
 echo -e  " ${red}Script Version                 : VERSION 1"
 echo -e  " ════════════════════════════════════════════════════════════════════════ "
