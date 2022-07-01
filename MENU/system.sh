@@ -27,6 +27,7 @@ echo -e  " ${red}[  7 ] DISPLAY SYSTEM INFORMATION${NC}"
 echo -e  " ${red}[  8 ] CHECK STREAM GEO LOCATION${NC}"
 echo -e  " ${red}[  9 ] BANDWIDTH USAGE"
 echo -e  " ${red}[ 10 ] ENCRYPT FILE"
+echo -e  " ${red}[  0 ] MENU"
 echo -e  " "
 echo -e  " ═════════════════════════════════════════════════════════════════ "
 echo -e  " ${red}Click [ CTRL + C ] Or x For Exit Menu "
@@ -65,6 +66,9 @@ echo -e "\e[0m"
    ;;
    10)
    enc
+   ;;
+   0)
+   menu
    ;;
    x)
    sleep 0.5
