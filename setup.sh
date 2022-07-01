@@ -197,7 +197,7 @@ cd /usr/bin
 chmod +x system
 sed -i -e 's/\r$//' system
 
-
+cd
 
 clear
 echo " "
