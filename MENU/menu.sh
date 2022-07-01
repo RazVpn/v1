@@ -61,16 +61,13 @@ echo -e  " ${red}Script Version                 : VERSION 1"
 echo -e  " ════════════════════════════════════════════════════════════════════════ "
 echo -e  " ${Bred}                               [ MAIN MENU ]                            ${NC}"                                       
 echo -e  " ${red}════════════════════════════════════════════════════════════════════════ "
-echo -e  " ${red}[  1 ] PANEL SSH & OPENVPN                    [ 11 ] WEBMIN MENU${NC}"
-echo -e  " ${red}[  2 ] PANEL WIREGUARD                        [ 12 ] CHECK RAM USAGE  ${NC}"
-echo -e  " ${red}[  3 ] PANEL SHADOWSOCKS R                    [ 13 ] REBOOT VPS$  ${NC}"
-echo -e  " ${red}[  4 ] PANEL SHADOWSOCKS OBFS                 [ 14 ] SPEEDTEST VPS  ${NC}"
-echo -e  " ${red}[  5 ] PANEL V2RAY CORE                       [ 15 ] SYSTEM INFORMATION   ${NC}"
-echo -e  " ${red}[  6 ] PANEL XRAY CORE                        [ 16 ] CHECK GEOLOCATION  ${NC}"
-echo -e  " ${red}[  7 ] PANEL TROJAN GFW                       [ 17 ] CHECK SERVICE ERROR  ${NC}"
-echo -e  " ${red}[  8 ] ADD/CHANGE DOMAIN VPS                  [ 18 ] UPDATE SCRIPT${NC}"
-echo -e  " ${red}[  9 ] CHANGE DNS SERVER                      [ 19 ] BANDWIDTH USAGE"
-echo -e  " ${red}[ 10 ] RENEW V2RAY/XRAY CERTIFICATION         [ 20 ] ENCRYPT FILE"
+echo -e  " ${red}[  1 ] PANEL SSH & OPENVPN                    [  8 ] REBOOT VPS$  ${NC}"
+echo -e  " ${red}[  2 ] PANEL WIREGUARD                   [  9 ] UPDATE SCRIPT${NC}"
+echo -e  " ${red}[  3 ] PANEL SHADOWSOCKS R                 [ 10 ] CHECK SERVICE ERROR  ${NC}"
+echo -e  " ${red}[  4 ] PANEL SHADOWSOCKS OBFS            [ 11 ] SYSTEM MENU ${NC}"  
+echo -e  " ${red}[  5 ] PANEL V2RAY CORE         " 
+echo -e  " ${red}[  6 ] PANEL XRAY CORE            "            
+echo -e  " ${red}[  7 ] PANEL TROJAN GFW        "                 
 echo -e  "  "
 echo -e  " ════════════════════════════════════════════════════════════════════════ "
 echo -e  " ${red} PREMIUM SERVER BY $name"       
@@ -104,43 +101,16 @@ echo -e "\e[0m"
    mtrojan
    ;;
    8)
-   add-host
-   ;;
-   9)
-   mdns
-   ;;
-   10)
-   recert-xrayv2ray
-   ;;
-   11)
-   wbmn
-   ;;
-   12)
-   ram
-   ;;
-   13)
    reboot
    ;;
-   14)
-   speedtest
-   ;;
-   15)
-   info
-   ;;
-   16)
-   nf
-   ;;
-   17)
-   checksystem  
-   ;;
-   18)
+   9)
    update  
    ;;  
-   19)
-   vnstat
-   ;;
-   20)
-   enc
+   10)
+   checksystem
+    ;;
+   11)
+   system
    ;;
    x)
    sleep 0.5
