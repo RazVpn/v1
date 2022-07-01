@@ -110,7 +110,7 @@ echo -e "\e[0m"
    checksystem
     ;;
    11)
-   ./system.sh
+   system
    ;;
    x)
    sleep 0.5
