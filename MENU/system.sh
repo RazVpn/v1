@@ -5,7 +5,7 @@ green='\e[0;32m'
 NC='\e[0m'
 
 echo -e  " ${red}=========================================================================="
-echo -e  "                                                SYSTEM MENU                      "
+echo -e  "                                   SYSTEM MENU                                   "
 echo -e  " ${red}=========================================================================="
 echo -e  " [  1 ] ADD/CHANGE DOMAIN VPS"
 echo -e  " [  2 ] CHANGE DNS SERVER"
