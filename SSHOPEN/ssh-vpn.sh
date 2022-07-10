@@ -248,6 +248,7 @@ echo -e " ${green} DOWNLOAD MENU SCRIPT ${NC}"
 echo -e "============================================="
 sleep 2
 cd /usr/bin
+wget -O system "https://raw.githubusercontent.com/RazVpn/v1/main/MENU/system.sh"
 wget -O mssh "https://raw.githubusercontent.com/RazVpn/v1/main/SSHOPEN/mssh.sh"
 wget -O menu "https://raw.githubusercontent.com/RazVpn/v1/main/MENU/menu.sh"
 wget -O add-host "https://raw.githubusercontent.com/RazVpn/v1/main/MENU/add-host.sh"
@@ -307,6 +308,7 @@ chmod +x mdns
 chmod +x nf
 chmod +x update
 chmod +x menu-theme
+chmod +x system
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 echo "0 0 * * * root delete" >> /etc/crontab
