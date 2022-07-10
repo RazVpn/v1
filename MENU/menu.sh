@@ -17,7 +17,7 @@ if [ $MYIP = $IZIN ]; then
   clear
 else
   echo -e ""
-  echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER @GHReyz${NC}"
+  echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER ${NC}"
   exit 1
 fi
 echo -e " "
@@ -36,8 +36,8 @@ cpu_usage+=" %"
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
-name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
-exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $3}')
+name=$(curl -sS https://raw.githubusercontent.com/RazVpn/ip/main/ipvps | grep $IPVPS | awk '{print $2}')
+exp=$(curl -sS https://raw.githubusercontent.com/RazVpn/ip/main/ipvps | grep $IPVPS | awk '{print $3}')
 c_xtls=$(grep -oc '### [^ ]*' /etc/xray/vless-direct.json | cut -d' ' -f2)
 c_xvmess=$(grep -oc '### [^ ]*' /etc/xray/v2ray-tls.json | cut -d' ' -f2)
 c_xvless=$(grep -oc '### [^ ]*' /etc/xray/vless-tls.json | cut -d' ' -f2)
@@ -88,52 +88,51 @@ else
   yesterday_txv=NULL
 fi
 rm -f /root/t1
-bash /root/.fontsam/banner
+
 echo -e " "
 echo -e "  Premium Script"| lolcat
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${green}                      • SERVER INFORMATION • " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${red}CPU MODEL                   :$cname"
-echo -e " ${red}NUMBER OF CORES             : $cores"
-echo -e " ${red}CPU USAGE                   : $cpu_usage1 %"
-echo -e " ${red}CPU FREQUENCY               :$freq MHz"
-echo -e " ${red}TOTAL AMOUNT OF RAM         : $tram MB"
-echo -e " ${red}SYSTEM UPTIME               : $up"
-echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
-echo -e " ${red}CITY LOCATION               : $city${NC}"
-echo -e " ${red}TIME LOCATION               : $TIME"
-echo -e " ${red}IP VPS NUMBER               : $IPVPS"
-echo -e " ${red}DOMAIN NAME                 : $DOMAIN${NC}"
-echo -e " ${red}VPS TYPE                    : PREMIUM"
-echo -e " ${red}SCRIPT VERSION              : Ichikaa (V1)"
-echo -e " ${red}CLIENT NAME                 : $name${NC}"
-echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
-echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
-echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
-echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
-echo -e " ${red} Provided  By                  : @Ichikaa01"
+echo -e " ${red}Ip Vps                      : $IPVPS"
+echo -e " ${red}Domain Name                 : $DOMAIN${NC}"
+echo -e " ${red}Cpu Model                   :$cname"
+echo -e " ${red}Number Of Cores             : $cores"
+echo -e " ${red}Cpu Usage                   : $cpu_usage1 %"
+echo -e " ${red}Cpu Frequency               :$freq MHz"
+echo -e " ${red}Total Amount Of Ram         : $tram MB"
+echo -e " ${red}System Uptime               :$up"
+echo -e " ${red}Isp/Provider                : $ISP"
+echo -e " ${red}City                        : $city${NC}"
+echo -e " ${red}Time Location               : $TIME"
+echo -e " ${red}Client Name                 : $name${NC}"
+echo -e " ${red}Exp Script Access           : $exp${NC}"
+echo -e " ${red}Os Version                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
+echo -e " ${red}Kernel Version              : $(uname -r)${NC}"
+echo -e " ${red}Exp Date Cert V2ray/Xray    : $expxray${NC}"
+echo -e " ${red}Provided  By                : @Ichikaa01"
+echo -e " ${red}Script Version              : Ichikaa (V1)"
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
+echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat 
+echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat  
 echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat 
-echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray" 
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${green}                         • MAIN MENU • "   
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${purple}[  1 ] PANEL SSH & OPENVPN                [  8 ] REBOOT VPS           "
-echo -e " ${purple}[  2 ] PANEL WIREGUARD                [  9 ] UPDATE SCRIPT "
-echo -e " ${purple}[  3 ] PANEL SHADOWSOCKS R      [  10 ] SYSTEM MENU"
-echo -e " ${purple}[  4 ] PANEL SHADOWSOCKS OBFS                        [ 11 ] CHECK SERVICE ERROR"               
+echo -e " ${purple}[  1 ] PANEL SSH & OPENVPN                   [  8 ] REBOOT VPS           "
+echo -e " ${purple}[  2 ] PANEL WIREGUARD                       [  9 ] UPDATE SCRIPT "
+echo -e " ${purple}[  3 ] PANEL SHADOWSOCKS R                   [ 10 ] SYSTEM MENU"
+echo -e " ${purple}[  4 ] PANEL SHADOWSOCKS OBFS                [ 11 ] CHECK SERVICE ERROR"               
 echo -e " ${purple}[  5 ] PANEL V2RAY CORE    "
 echo -e " ${purple}[  6 ] PANEL XRAY CORE"                 
 echo -e " ${purple}[  7 ] PANEL TROJAN GFW"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${white}🔰 Premium Script By $name" 
-echo -e " 🔰 Thank You For Using Script By @Ichikaa01 🔰" 
+echo -e " ${white} Premium Script By $name" 
+echo -e "  Thank You For Using Script By @Ichikaa01 " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${red} Click [ CTRL+ C ] Or X to Exit Menu
 echo -e " "
