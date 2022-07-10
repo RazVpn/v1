@@ -169,10 +169,10 @@ case $menu in
   update
   ;;
 10)
-  checksystem
+  system 
   ;;
 11)
-  system
+  checksystem
    ;;
  x)
   sleep 0.5
