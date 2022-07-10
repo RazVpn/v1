@@ -123,10 +123,10 @@ echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v        
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
 echo -e " ${green}                         • MAIN MENU • "   
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${purple}[  1 ] PANEL SSH & OPENVPN                   [  8 ] REBOOT VPS           "
-echo -e " ${purple}[  2 ] PANEL WIREGUARD                       [  9 ] UPDATE SCRIPT "
-echo -e " ${purple}[  3 ] PANEL SHADOWSOCKS R                   [ 10 ] SYSTEM MENU"
-echo -e " ${purple}[  4 ] PANEL SHADOWSOCKS OBFS                [ 11 ] CHECK SERVICE ERROR"               
+echo -e " ${purple}[  1 ] PANEL SSH & OPENVPN               [  8 ] REBOOT VPS           "
+echo -e " ${purple}[  2 ] PANEL WIREGUARD                   [  9 ] UPDATE SCRIPT "
+echo -e " ${purple}[  3 ] PANEL SHADOWSOCKS R               [ 10 ] SYSTEM MENU"
+echo -e " ${purple}[  4 ] PANEL SHADOWSOCKS OBFS            [ 11 ] CHECK SERVICE ERROR"               
 echo -e " ${purple}[  5 ] PANEL V2RAY CORE    "
 echo -e " ${purple}[  6 ] PANEL XRAY CORE"                 
 echo -e " ${purple}[  7 ] PANEL TROJAN GFW"
@@ -180,7 +180,7 @@ case $menu in
   jinggo
   ;;
 *)
-  echo -e "ERROR!! Please Enter an Correct Number"
+  echo -e "ERROR!! Please Enter a Correct Number"
   sleep 1
   clear
   menu
