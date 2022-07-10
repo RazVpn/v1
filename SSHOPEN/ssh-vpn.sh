@@ -351,5 +351,8 @@ rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
 
+# Auto reboot every 12.00am
+echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
+
 # finihsing
 clear
