@@ -168,7 +168,7 @@ echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${numb
 echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  8 ] $NC \e[${below}SYSTEM MENU"$NC
 echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL SSR & SS           \e[${number} [  9 ] $NC \e[${below}CHECK SERVICE ERROR"$NC
 echo -e " \e[${number} [  4 ] $NC \e[${below} PANEL V2RAY CORE         \e[${number} [ 10 ] $NC \e[${below}MENU THEMES"$NC               
-echo -e " \e[${number} [  5 ] $NC \e[${below} PANEL XRAY CORE"$NC                 
+echo -e " \e[${number} [  5 ] $NC \e[${below} PANEL XRAY CORE          \e[${number} [ 11 ] $NC \e[${below}CLEAR RAM CACHE"$NC                 
 echo -e " \e[${number} [  6 ] $NC \e[${below} PANEL TROJAN GFW"$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}" 
 echo -e " \e[${below} Premium VPS by $creditt"$NC 
@@ -210,6 +210,11 @@ case $menu in
   ;;
 10)
   menu-theme
+   ;;
+11)
+  su -c "echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'" root
+  sleep 0.5
+  menu
    ;;
  x)
   sleep 0.5
