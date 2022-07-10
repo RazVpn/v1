@@ -35,7 +35,10 @@ DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
 TIME=`curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
 ISP=`curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf`
-up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
+upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
+uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
+cekup=`uptime -p | grep -ow "day"`
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
@@ -137,7 +140,11 @@ echo -e "\e[${text} Number Of Cores             :  $cores"
 echo -e "\e[${text} Cpu Usage                   :  $cpu_usage1 %"
 echo -e "\e[${text} Cpu Frequency               : $freq MHz"
 echo -e "\e[${text} Total Amount Of Ram         :  $tram MB"
-echo -e "\e[${text} System Uptime               :$up"
+if [ "$cekup" = "day" ]; then
+echo -e "\e[${text} System Uptime               :  $uphours $upminutes $uptimecek"
+else
+echo -e "System Uptime                          :  $uphours $upminutes"
+fi
 echo -e "\e[${text} Isp/Provider                :  $ISP"
 echo -e "\e[${text} City                        :  $city${NC}"
 echo -e "\e[${text} Time Location               :  $TIME"
