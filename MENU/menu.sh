@@ -143,7 +143,7 @@ echo -e "\e[${text} Total Amount Of Ram         :  $tram MB"
 if [ "$cekup" = "day" ]; then
 echo -e "\e[${text} System Uptime               :  $uphours $upminutes $uptimecek"
 else
-echo -e "System Uptime                          :  $uphours $upminutes"
+echo -e "\e[${text} System Uptime               :  $uphours $upminutes"
 fi
 echo -e "\e[${text} Isp/Provider                :  $ISP"
 echo -e "\e[${text} City                        :  $city${NC}"
