@@ -1,14 +1,23 @@
-nkini#!/bin/bash
+#!/bin/bash
 clear
-red='\e[1;35m'
-green='\e[1;36m'
-blue='\e[1;34m'
-blue_b='\e[1;94m'
-yellow='\e[1;33m'
-purple='\e[1;31m'
-white='\e[1;37m'
-try='\e[0;103m'
-cyan='\e[1;36m'
+back_text='\e[0;47;30m'
+BGBLUE='\e[1;44m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+DF='\e[39m'
+Bold='\e[1m'
+Blink='\e[5m'
+yell='\e[\e[${number}'
+red='\e[31m'
+green='\e[32m'
+blue='\e[34m'
+cyan='\e[\e[${number}'
+line='\e[91m'
+Lgreen='\e[92m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;\e[${number}'
+LIGHT='\033[0;37m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
 IZIN=$(curl https://raw.githubusercontent.com/RazVpn/ip/main/ipvps | grep $MYIP | awk '{print $4}')
@@ -20,7 +29,7 @@ else
   echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER ${NC}"
   exit 1
 fi
-echo -e " "
+clear
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
@@ -88,58 +97,83 @@ else
   yesterday_txv=NULL
 fi
 rm -f /root/t1
-
+clear
+# PROVIDED
+creditt=$(cat /root/provided)
+# BANNER COLOUR
+banner_colour=$(cat /etc/banner)
+# TEXT ON BOX COLOUR
+box=$(cat /etc/box)
+# LINE COLOUR
+line=$(cat /etc/line)
+# TEXT COLOUR ON TOP
+text=$(cat /etc/text)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# BACKGROUND TEXT COLOUR
+back_text=$(cat /etc/back)
+# NUMBER COLOUR
+number=$(cat /etc/number)
+# BANNER
+banner=$(cat /usr/bin/bannerku)
+ascii=$(cat /usr/bin/test)
+result_banner() {
+	figlet -f "$ascii" "$banner"
+}
+clear
+echo ""
+printf "\e[${banner_colour}"
+result_banner
+echo -e "\e[$text Premium Script"
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
+echo -e "\e[${back_text}                 \e[30m•\e[$box SERVER INFORMATION\e[30m •                          \e[m"
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
+echo -e "\e[${text} Ip Vps                      :  $IPVPS"
+echo -e "\e[${text} Domain Name                 :  $DOMAIN${NC}"
+echo -e "\e[${text} Os Version                  :  $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
+echo -e "\e[${text} Kernel Version              :  $(uname -r)${NC}"
+echo -e "\e[${text} Cpu Model                   : $cname"
+echo -e "\e[${text} Number Of Cores             :  $cores"
+echo -e "\e[${text} Cpu Usage                   :  $cpu_usage1 %"
+echo -e "\e[${text} Cpu Frequency               : $freq MHz"
+echo -e "\e[${text} Total Amount Of Ram         :  $tram MB"
+echo -e "\e[${text} System Uptime               :$up"
+echo -e "\e[${text} Isp/Provider                :  $ISP"
+echo -e "\e[${text} City                        :  $city${NC}"
+echo -e "\e[${text} Time Location               :  $TIME"
+echo -e "\e[${text} Client Name                 :  $name${NC}"
+echo -e "\e[${text} Exp Script Access           :  $exp${NC}"
+echo -e "\e[${text} Exp Date Cert V2ray/Xray    :  $expxray${NC}"
+echo -e "\e[${text} Provided  By                :  $creditt"
+echo -e "\e[${text} Script Version              :  Ichikaa (V1)"$NC
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
+echo -e "\e[${text} TOTAL USER        SSH/OVPN          XRAY            V2RAY"$NC 
+echo -e "\e[${text}                     $total_ssh               $total_xray                $total_v2ray"$NC 
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
+echo -e "\e[${text} TRAFFIC           TODAY          YESTERDAY          MONTH"  
+echo -e "\e[${text} UPLOAD            $today_tx $today_txv        $yesterday_tx  $yesterday_txv         $month_tx $month_txv" 
+echo -e "\e[${text} DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
+echo -e "\e[${text} TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"$NC 
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
+echo -e "\e[${back_text}                      \e[30m•\e[$box MAIN MENU\e[30m •                              \e[m"
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
+echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${number} [  8 ] $NC \e[${below}REBOOT VPS"$NC
+echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  9 ] $NC \e[${below}UPDATE SCRIPT"$NC
+echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL SHADOWSOCKS R      \e[${number} [ 10 ] $NC \e[${below}SYSTEM MENU"$NC
+echo -e " \e[${number} [  4 ] $NC \e[${below} PANEL SHADOWSOCKS OBFS   \e[${number} [ 11 ] $NC \e[${below}CHECK SERVICE ERROR"$NC               
+echo -e " \e[${number} [  5 ] $NC \e[${below} PANEL V2RAY CORE         \e[${number} [ 12 ] $NC \e[${below}MENU THEMES"$NC
+echo -e " \e[${number} [  6 ] $NC \e[${below} PANEL XRAY CORE"$NC                 
+echo -e " \e[${number} [  7 ] $NC \e[${below} PANEL TROJAN GFW"$NC
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}" 
+echo -e " \e[${below} Premium VPS by $creditt"$NC 
+echo -e " \e[${below} Thank You For Using Script By @Ichikaa01"$NC 
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}"
+echo -e ""
+echo -e "\e[${below} Click [ CTRL+ C ] Or X to Exit Menu"
 echo -e " "
-echo -e "  Premium Script"| lolcat
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${green}                      • SERVER INFORMATION • " 
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${red}Ip Vps                      :  $IPVPS"
-echo -e " ${red}Domain Name                 :  $DOMAIN${NC}"
-echo -e " ${red}Os Version                  :  $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
-echo -e " ${red}Kernel Version              :  $(uname -r)${NC}"
-echo -e " ${red}Cpu Model                   : $cname"
-echo -e " ${red}Number Of Cores             :  $cores"
-echo -e " ${red}Cpu Usage                   :  $cpu_usage1 %"
-echo -e " ${red}Cpu Frequency               : $freq MHz"
-echo -e " ${red}Total Amount Of Ram         :  $tram MB"
-echo -e " ${red}System Uptime               :$up"
-echo -e " ${red}Isp/Provider                :  $ISP"
-echo -e " ${red}City                        :  $city${NC}"
-echo -e " ${red}Time Location               :  $TIME"
-echo -e " ${red}Client Name                 :  $name${NC}"
-echo -e " ${red}Exp Script Access           :  $exp${NC}"
-echo -e " ${red}Exp Date Cert V2ray/Xray    :  $expxray${NC}"
-echo -e " ${red}Provided  By                :  @Ichikaa01"
-echo -e " ${red}Script Version              :  Ichikaa (V1)"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat 
-echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray" 
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat  
-echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv" 
-echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
-echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${green}                         • MAIN MENU • "   
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${purple}[  1 ] PANEL SSH & OPENVPN               [  8 ] REBOOT VPS           "
-echo -e " ${purple}[  2 ] PANEL WIREGUARD                   [  9 ] UPDATE SCRIPT "
-echo -e " ${purple}[  3 ] PANEL SHADOWSOCKS R               [ 10 ] SYSTEM MENU"
-echo -e " ${purple}[  4 ] PANEL SHADOWSOCKS OBFS            [ 11 ] CHECK SERVICE ERROR"               
-echo -e " ${purple}[  5 ] PANEL V2RAY CORE    "
-echo -e " ${purple}[  6 ] PANEL XRAY CORE"                 
-echo -e " ${purple}[  7 ] PANEL TROJAN GFW"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════" 
-echo -e " ${white} Premium Script By $name" 
-echo -e "  Thank You For Using Script By @Ichikaa01 " 
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${red} Click [ CTRL+ C ] Or X to Exit Menu"
-echo -e " "
-echo -e "\e[1;37m"
+echo -e "\e[$below "
 read -p "     Please select an option :  " menu 
-echo -e " "
-echo -e "\e[0m"
+echo -e ""
 case $menu in
 1)
   mssh
@@ -173,6 +207,9 @@ case $menu in
   ;;
 11)
   checksystem
+  ;;
+12)
+  menu-theme
    ;;
  x)
   sleep 0.5
