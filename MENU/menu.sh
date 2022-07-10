@@ -126,7 +126,7 @@ printf "\e[${banner_colour}"
 result_banner
 echo -e "\e[$text Premium Script"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e "\e[${back_text}                 \e[30m•\e[$box SERVER INFORMATION\e[30m •                          \e[m"
+echo -e "\e[${back_text}                  \e[30m•\e[$box SERVER INFORMATION\e[30m •                         \e[m"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
 echo -e "\e[${text} Ip Vps                      :  $IPVPS"
 echo -e "\e[${text} Domain Name                 :  $DOMAIN${NC}"
@@ -159,8 +159,8 @@ echo -e "\e[${back_text}                      \e[30m•\e[$box MAIN MENU\e[30m �
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${number} [  7 ] $NC \e[${below}REBOOT VPS"$NC
 echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  8 ] $NC \e[${below}SYSTEM MENU"$NC
-echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL SSR AND SS         \e[${number} [  9 ] $NC \e[${below}CHECK SERVICE ERROR"$NC
-echo -e " \e[${number} [  4 ] $NC \e[${below} PANEL V2RAY CORE   \e[${number} [ 10 ] $NC \e[${below}MENU THEMES"$NC               
+echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL SSR & SS           \e[${number} [  9 ] $NC \e[${below}CHECK SERVICE ERROR"$NC
+echo -e " \e[${number} [  4 ] $NC \e[${below} PANEL V2RAY CORE         \e[${number} [ 10 ] $NC \e[${below}MENU THEMES"$NC               
 echo -e " \e[${number} [  5 ] $NC \e[${below} PANEL XRAY CORE"$NC                 
 echo -e " \e[${number} [  6 ] $NC \e[${below} PANEL TROJAN GFW"$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}" 
