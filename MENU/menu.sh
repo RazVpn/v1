@@ -134,7 +134,7 @@ echo -e " ${yellow}════════════════════�
 echo -e " ${white} Premium Script By $name" 
 echo -e "  Thank You For Using Script By @Ichikaa01 " 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${red} Click [ CTRL+ C ] Or X to Exit Menu
+echo -e " ${red} Click [ CTRL+ C ] Or X to Exit Menu"
 echo -e " "
 echo -e "\e[1;37m"
 read -p "     Please select an option :  " menu 
