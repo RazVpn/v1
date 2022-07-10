@@ -126,7 +126,7 @@ printf "\e[${banner_colour}"
 result_banner
 echo -e "\e[$text Premium Script"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e "\e[${back_text}                        \e[30m•\e[$box SERVER INFORMATION\e[30m •                   \e[m"
+echo -e "\e[${back_text}                      \e[30m•\e[$box SERVER INFORMATION\e[30m •                     \e[m"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
 echo -e "\e[${text} Ip Vps                      :  $IPVPS"
 echo -e "\e[${text} Domain Name                 :  $DOMAIN${NC}"
@@ -157,16 +157,16 @@ echo -e "\e[${text} TOTAL             $today $today_v      $yesterday $yesterday
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e "\e[${back_text}                          \e[30m•\e[$box MAIN MENU\e[30m •                          \e[m"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
-echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${number} [  8 ] $NC \e[${below}REBOOT VPS"$NC
-echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  9 ] $NC \e[${below}UPDATE SCRIPT"$NC
-echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL SHADOWSOCKS R      \e[${number} [ 10 ] $NC \e[${below}SYSTEM MENU"$NC
-echo -e " \e[${number} [  4 ] $NC \e[${below} PANEL SHADOWSOCKS OBFS   \e[${number} [ 11 ] $NC \e[${below}CHECK SERVICE ERROR"$NC               
-echo -e " \e[${number} [  5 ] $NC \e[${below} PANEL V2RAY CORE         \e[${number} [ 12 ] $NC \e[${below}MENU THEMES"$NC
-echo -e " \e[${number} [  6 ] $NC \e[${below} PANEL XRAY CORE"$NC                 
-echo -e " \e[${number} [  7 ] $NC \e[${below} PANEL TROJAN GFW"$NC
+echo -e " \e[${number}[  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${number} [  8 ] $NC \e[${below}REBOOT VPS"$NC
+echo -e " \e[${number}[  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  9 ] $NC \e[${below}SYSTEM MENU"$NC
+echo -e " \e[${number}[  3 ] $NC \e[${below} PANEL SHADOWSOCKS R      \e[${number} [ 10 ] $NC \e[${below}CHECK SERVICE ERROR"$NC
+echo -e " \e[${number}[  4 ] $NC \e[${below} PANEL SHADOWSOCKS OBFS   \e[${number} [ 11 ] $NC \e[${below}MENU THEMES"$NC               
+echo -e " \e[${number}[  5 ] $NC \e[${below} PANEL V2RAY CORE"$NC
+echo -e " \e[${number}[  6 ] $NC \e[${below} PANEL XRAY CORE"$NC                 
+echo -e " \e[${number}[  7 ] $NC \e[${below} PANEL TROJAN GFW"$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}" 
-echo -e " \e[${below} Premium VPS by $creditt"$NC 
-echo -e " \e[${below} Thank You For Using Script By @Ichikaa01"$NC 
+echo -e " \e[${below}Premium VPS by $creditt"$NC 
+echo -e " \e[${below}Thank You For Using Script By @Ichikaa01"$NC 
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}"
 echo -e ""
 echo -e "\e[${below} Click [ CTRL+ C ] Or X to Exit Menu"
@@ -200,15 +200,12 @@ case $menu in
   reboot
   ;;
 9)
-  update
-  ;;
-10)
   system 
   ;;
-11)
+10)
   checksystem
   ;;
-12)
+11)
   menu-theme
    ;;
  x)
