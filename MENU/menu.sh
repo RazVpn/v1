@@ -126,7 +126,7 @@ printf "\e[${banner_colour}"
 result_banner
 echo -e "\e[$text Premium Script"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e "\e[${back_text}                     \e[30m•\e[$box SERVER INFORMATION\e[30m •                      \e[m"
+echo -e "\e[${back_text}                        \e[30m•\e[$box SERVER INFORMATION\e[30m •                   \e[m"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
 echo -e "\e[${text} Ip Vps                      :  $IPVPS"
 echo -e "\e[${text} Domain Name                 :  $DOMAIN${NC}"
@@ -155,7 +155,7 @@ echo -e "\e[${text} UPLOAD            $today_tx $today_txv        $yesterday_tx 
 echo -e "\e[${text} DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e "\e[${text} TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"$NC 
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
-echo -e "\e[${back_text}                         \e[30m•\e[$box MAIN MENU\e[30m •                           \e[m"
+echo -e "\e[${back_text}                          \e[30m•\e[$box MAIN MENU\e[30m •                          \e[m"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${number} [  8 ] $NC \e[${below}REBOOT VPS"$NC
 echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  9 ] $NC \e[${below}UPDATE SCRIPT"$NC
