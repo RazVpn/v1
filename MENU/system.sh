@@ -5,7 +5,7 @@ green='\e[0;32m'
 NC='\e[0m'
 
 echo -e  " ${red}=========================================================================="
-echo -e  "                                                SYSTEM MENU                                                                                                  "
+echo -e  "                                              SYSTEM MENU                        "
 echo -e  " ${red}=========================================================================="
 echo -e  " [  1 ] ADD/CHANGE DOMAIN VPS"
 echo -e  " [  2 ] CHANGE DNS SERVER"
@@ -25,7 +25,7 @@ echo -e  "  "
 echo -e "\e[1;31m"
 read -p  "     Please select an option :  " system
 echo -e "\e[0m"
-case $v2raycore in
+case $system in
     1)
     add-host
     ;;
