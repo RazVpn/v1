@@ -5,24 +5,25 @@ green='\e[0;32m'
 NC='\e[0m'
 
 echo -e  " ${red}=========================================================================="
-echo -e  "                                   SYSTEM MENU                                   "
+echo -e  "                                                SYSTEM MENU                                                                                                  "
 echo -e  " ${red}=========================================================================="
-echo -e  " [  1 ] ADD/CHANGE DOMAIN VPS"
-echo -e  " [  2 ] CHANGE DNS SERVER"
-echo -e  " [  3 ] RENEW V2RAY AND XRAY CERTIFICATION"
-echo -e  " [  4 ] WEBMIN MENU"
-echo -e  " [  5 ] CHECK RAM USAGE"
-echo -e  " [  6 ] SPEEDTEST VPS"
-echo -e  " [  7 ] DISPLAY SYSTEM INFORMATION"
-echo -e  " [  8 ] CHECK STREAM GEO LOCATION"
-echo -e  " [  9 ] BANDWIDTH USAGE"
+echo -e  " [   1 ] ADD/CHANGE DOMAIN VPS"
+echo -e  " [   2 ] CHANGE DNS SERVER"
+echo -e  " [   3 ] RENEW V2RAY AND XRAY CERTIFICATION"
+echo -e  " [   4 ] WEBMIN MENU"
+echo -e  " [   5 ] CHECK RAM USAGE"
+echo -e  " [   6 ] SPEEDTEST VPS"
+echo -e  " [   7 ] DISPLAY SYSTEM INFORMATION"
+echo -e  " [   8 ] CHECK STREAM GEO LOCATION"
+echo -e  " [   9 ] BANDWIDTH USAGE"
+echo -e  " [ 10 ] CHANGE PASSWORD VPS"
 echo -e "=========================================================================="
 echo -e "${red}[ 0 ] EXIT TO MENU"
 echo -e "=========================================================================="
 echo -e "Click [ CTRL + C ] Or X For Exit"
 echo -e  "  "
 echo -e "\e[1;31m"
-read -p  "     Please select an option :  " v2raycore
+read -p  "     Please select an option :  " system
 echo -e "\e[0m"
 case $v2raycore in
     1)
@@ -52,6 +53,9 @@ case $v2raycore in
     9)
     vnstat
     ;;
+    10)
+    passwd
+    ;;
     x)
     exit
     ;;
@@ -64,6 +68,6 @@ case $v2raycore in
    echo -e "ERROR!! Please Enter an Correct Number"
    sleep 1
    clear
-   mv2raycore
+   system
    ;;
    esac
