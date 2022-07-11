@@ -32,7 +32,8 @@ clear
 echo ""
 printf "\e[${banner_colour}"
 result_banner                                                                           
-                                                                                
+ 
+echo ""
 echo -e  "${red}TYPE 'menu' TO GO TO MAIN OR 'exit' TO LOGOUT"${NC}
 echo -e  ""
 
