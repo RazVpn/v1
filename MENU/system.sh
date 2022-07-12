@@ -94,26 +94,26 @@ result_banner() {
 }
 
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e  " \e[${back_text}                                              SYSTEM MENU                                                                                                  "
+echo -e  " \e[${back_text}                            SYSTEM MENU                               "$NC
+echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
+echo -e  "\e[${text} [  1 ] ADD/CHANGE DOMAIN VPS"
+echo -e  "\e[${text} [  2 ] CHANGE DNS SERVER"
+echo -e  "\e[${text} [  3 ] RENEW V2RAY AND XRAY CERTIFICATION"
+echo -e  "\e[${text} [  4 ] WEBMIN MENU"
+echo -e  "\e[${text} [  5 ] CHECK RAM USAGE"
+echo -e  "\e[${text} [  6 ] SPEEDTEST VPS"
+echo -e  "\e[${text} [  7 ] DISPLAY SYSTEM INFORMATION"
+echo -e  "\e[${text} [  8 ] CHECK STREAM GEO LOCATION"
+echo -e  "\e[${text} [  9 ] BANDWIDTH USAGE"
+echo -e  "\e[${text} [ 10 ] CHANGE PASSWORD VPS"
+echo -e  "\e[${text} [ 11 ] ON/OFF AUTO REBOOT VPS"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e  "\e[${back_text} BANDWIDTH USAGE "
+echo -e  "\e[${back_text}                           BANDWIDTH USAGE                             "$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e "\e[${text} TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e "\e[${text} UPLOAD            $today_tx $today_txv        $yesterday_tx  $yesterday_txv         $month_tx $month_txv" 
 echo -e "\e[${text} DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
 echo -e "\e[${text} TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"$NC 
-echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
-echo -e  "\e[${text} [   1 ] ADD/CHANGE DOMAIN VPS"
-echo -e  "\e[${text} [   2 ] CHANGE DNS SERVER"
-echo -e  "\e[${text} [   3 ] RENEW V2RAY AND XRAY CERTIFICATION"
-echo -e  "\e[${text} [   4 ] WEBMIN MENU"
-echo -e  "\e[${text} [   5 ] CHECK RAM USAGE"
-echo -e  "\e[${text} [   6 ] SPEEDTEST VPS"
-echo -e  "\e[${text} [   7 ] DISPLAY SYSTEM INFORMATION"
-echo -e  "\e[${text} [   8 ] CHECK STREAM GEO LOCATION"
-echo -e  "\e[${text} [   9 ] BANDWIDTH USAGE"
-echo -e  "\e[${text} [ 10 ] CHANGE PASSWORD VPS"
-echo -e  "\e[${text} [ 11 ] ON/OFF AUTO REBOOT VPS"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
 echo -e "\e[${back_text} [  0 ] EXIT TO MENU"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
