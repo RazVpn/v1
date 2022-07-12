@@ -112,8 +112,8 @@ echo -e "\e[${back_text}                           BANDWIDTH USAGE              
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e "\e[${text} TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e "\e[${text} UPLOAD            $today_tx $today_txv        $yesterday_tx  $yesterday_txv         $month_tx $month_txv" 
-echo -e "\e[${text} DOWNLOAD          $today_rx $today_rxv        $yesterday_rx $yesterday_rxv          $month_rx $month_rxv" 
-echo -e "\e[${text} TOTAL             $today $today_v       $yesterday $yesterday_v          $month $month_v"$NC 
+echo -e "\e[${text} DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv" 
+echo -e "\e[${text} TOTAL             $today $today_v      $yesterday $yesterday_v          $month $month_v"$NC 
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
 echo -e "\e[${text} [  0 ] EXIT TO MENU"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
