@@ -46,9 +46,9 @@ Info3="Auto Reboot set every 12 hours ${Green_font_prefix}[ON]${Font_color_suffi
 Info4="Auto Reboot set every 1 day ${Green_font_prefix}[ON]${Font_color_suffix}"
 Info5="Auto Reboot set every 1 week ${Green_font_prefix}[ON]${Font_color_suffix}"
 Info6="Auto Reboot set every 1 month ${Green_font_prefix}[ON]${Font_color_suffix}"
-Info7="Auto Reboot set Every 00]00A]M ${Green_font_prefix}[ON]${Font_color_suffix}"
-Info8="Auto Reboot set Every 2]00A]M ${Green_font_prefix}[ON]${Font_color_suffix}"
-Info9="Auto Reboot set Every 4]00A]M ${Green_font_prefix}[ON]${Font_color_suffix}"
+Info7="Auto Reboot set Every 00.00AM ${Green_font_prefix}[ON]${Font_color_suffix}"
+Info8="Auto Reboot set Every 2.00AM ${Green_font_prefix}[ON]${Font_color_suffix}"
+Info9="Auto Reboot set Every 4.00AM ${Green_font_prefix}[ON]${Font_color_suffix}"
 Error="Auto Reboot Server ${Red_font_prefix}[OFF]${Font_color_suffix}"
 cek=$(cat /home/autoreboot)
 function every_an_hour () {
