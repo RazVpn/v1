@@ -94,7 +94,7 @@ result_banner() {
 }
 
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e "\e[${back_text}                            SYSTEM MENU                           "$NC
+echo -e "\e[${back_text}                            SYSTEM MENU                          "$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e  "\e[${text} [  1 ] ADD/CHANGE DOMAIN VPS"
 echo -e  "\e[${text} [  2 ] CHANGE DNS SERVER"
@@ -108,7 +108,7 @@ echo -e  "\e[${text} [  9 ] BANDWIDTH USAGE"
 echo -e  "\e[${text} [ 10 ] CHANGE PASSWORD VPS"
 echo -e  "\e[${text} [ 11 ] ON/OFF AUTO REBOOT VPS"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC
-echo -e "\e[${back_text}                           BANDWIDTH USAGE                        "$NC
+echo -e "\e[${back_text}                           BANDWIDTH USAGE                       "$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e "\e[${text} TRAFFIC           TODAY          YESTERDAY          MONTH"  
 echo -e "\e[${text} UPLOAD            $today_tx $today_txv        $yesterday_tx  $yesterday_txv         $month_tx $month_txv" 
