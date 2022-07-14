@@ -109,7 +109,7 @@ uploadsize=$(($upload/1073741824))
 # Used Ram
 uram=$( free -m | awk 'NR==2 {print $3}' )
 # Free Ram
-fram=$( free -m | awk 'NR==2 {print $4}' 
+fram=$( free -m | awk 'NR==2 {print $4}' )
 
 rm -f /root/t1
 clear
