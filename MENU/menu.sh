@@ -99,6 +99,18 @@ else
   yesterday_tx=NULL
   yesterday_txv=NULL
 fi
+
+# Download
+download=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev  | awk '{print $2}' | paste -sd+ - | bc`
+downloadsize=$(($download/1073741824))
+# Upload
+upload=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev | awk '{print $10}' | paste -sd+ - | bc`
+uploadsize=$(($upload/1073741824))
+# Used Ram
+uram=$( free -m | awk 'NR==2 {print $3}' )
+# Free Ram
+fram=$( free -m | awk 'NR==2 {print $4}' 
+
 rm -f /root/t1
 clear
 # PROVIDED
@@ -140,6 +152,8 @@ echo -e "\e[${text} Number Of Cores             :  $cores"
 echo -e "\e[${text} Cpu Usage                   :  $cpu_usage1 %"
 echo -e "\e[${text} Cpu Frequency               : $freq MHz"
 echo -e "\e[${text} Total Amount Of Ram         :  $tram MB"
+echo -e "\e[${text} Used RAM                    :  $uram MB"
+echo -e "\e[${text} Free RAM                    :  $fram MB"
 if [ "$cekup" = "day" ]; then
 echo -e "\e[${text} System Uptime               :  $uphours $upminutes $uptimecek"
 else
