@@ -159,6 +159,8 @@ echo -e "\e[${text} System Uptime               :  $uphours $upminutes $uptimece
 else
 echo -e "\e[${text} System Uptime               :  $uphours $upminutes"
 fi
+echo -e "\e[${text} Download                    :  $downloadsize GB "
+echo -e "\e[${text} Upload                      :  $uploadsize GB "
 echo -e "\e[${text} Isp/Provider                :  $ISP"
 echo -e "\e[${text} City                        :  $city${NC}"
 echo -e "\e[${text} Time Location               :  $TIME"
