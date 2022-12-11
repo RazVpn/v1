@@ -151,9 +151,8 @@ echo -e "\e[${text} Cpu Model                   : $cname"
 echo -e "\e[${text} Number Of Cores             :  $cores"
 echo -e "\e[${text} Cpu Usage                   :  $cpu_usage1 %"
 echo -e "\e[${text} Cpu Frequency               : $freq MHz"
-echo -e "\e[${text} Total Amount Of Ram         :  $tram MB"
-echo -e "\e[${text} Used RAM                    :  $uram MB"
-echo -e "\e[${text} Free RAM                    :  $fram MB"
+echo -e "\e[${text} Isp/Provider                :  $ISP"
+echo -e "\e[${text} City                        :  $city${NC}"
 if [ "$cekup" = "day" ]; then
 echo -e "\e[${text} System Uptime               :  $uphours $upminutes $uptimecek"
 else
@@ -161,26 +160,24 @@ echo -e "\e[${text} System Uptime               :  $uphours $upminutes"
 fi
 echo -e "\e[${text} Download                    :  $downloadsize GB "
 echo -e "\e[${text} Upload                      :  $uploadsize GB "
-echo -e "\e[${text} Isp/Provider                :  $ISP"
-echo -e "\e[${text} City                        :  $city${NC}"
-echo -e "\e[${text} Time Location               :  $TIME"
 echo -e "\e[${text} Client Name                 :  $name${NC}"
 echo -e "\e[${text} Exp Script Access           :  $exp${NC}"
 echo -e "\e[${text} Exp Date Cert V2ray/Xray    :  $expxray${NC}"
 echo -e "\e[${text} Provided  By                :  $creditt"
-echo -e "\e[${text} Script Version              :  Ichikaa (V1)"$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e "\e[${text} TOTAL USER        SSH/OVPN          XRAY            V2RAY"$NC 
 echo -e "\e[${text}                     $total_ssh               $total_xray                $total_v2ray"$NC 
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
 echo -e "\e[${back_text}                      \e[30m•\e[$box MAIN MENU\e[30m •                              \e[m"
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════"$NC 
-echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN      \e[${number} [  7 ] $NC \e[${below}REBOOT VPS"$NC
-echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL WIREGUARD          \e[${number} [  8 ] $NC \e[${below}SYSTEM MENU"$NC
-echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL SSR & SS           \e[${number} [  9 ] $NC \e[${below}CHECK SERVICE ERROR"$NC
-echo -e " \e[${number} [  4 ] $NC \e[${below} PANEL V2RAY CORE         \e[${number} [ 10 ] $NC \e[${below}MENU THEMES"$NC               
-echo -e " \e[${number} [  5 ] $NC \e[${below} PANEL XRAY CORE          \e[${number} [ 11 ] $NC \e[${below}CLEAR RAM CACHE"$NC                 
-echo -e " \e[${number} [  6 ] $NC \e[${below} PANEL TROJAN GFW"$NC
+echo -e " \e[${number} [  1 ] $NC \e[${below} PANEL SSH & OPENVPN"$NC
+echo -e " \e[${number} [  2 ] $NC \e[${below} PANEL XRAY CORE"$NC        
+echo -e " \e[${number} [  3 ] $NC \e[${below} PANEL TROJAN GFW"$NC        
+echo -e " \e[${number} [  4 ] $NC \e[${below}REBOOT VPS"$NC                     
+echo -e " \e[${number} [  5 ] $NC \e[${below}SYSTEM MENU"$NC                           
+echo -e " \e[${number} [  6 ] $NC \e[${below}CHECK SERVICE ERROR"$NC
+echo -e " \e[${number} [  7 ] $NC \e[${below}MENU THEMES"$NC
+echo -e " \e[${number} [  8 ] $NC \e[${below}CLEAR RAM CACHE"$NC
 echo -e "\e[${line}═════════════════════════════════════════════════════════════════${NC}" 
 echo -e " \e[${below} Premium VPS by $creditt"$NC 
 echo -e " \e[${below} Thank You For Using Script By @Ichikaa01"$NC 
@@ -196,33 +193,24 @@ case $menu in
   mssh
   ;;
 2)
-  mwg
-  ;;
-3)
-  mssr
-  ;;
-4)
-  mv2raycore
-  ;;
-5)
   mxraycore
   ;;
-6)
+3)
   mtrojan
   ;;
-7)
+4)
   reboot
   ;;
-8)
+5)
   system 
   ;;
-9)
+6)
   checksystem
   ;;
-10)
+7)
   menu-theme
    ;;
-11)
+8)
   su -c "echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'" root
   sleep 0.5
   menu
